@@ -1,0 +1,55 @@
+{
+  "name": "fivem-ts-vue3-boilerplate",
+  "version": "1.0.0",
+  "description": "A Typescript resource using Vue3, Pinia and Tailwindcss for UI Boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build:ui",
+    "build:resource": "webpack --mode production",
+    "build:ui": "cd ui && vue-tsc --noEmit && vite build && xcopy static\\* ..\\dist\\ui\\static\\ /e /i /h",
+    "dev:resource": "webpack --mode development --watch",
+    "dev:ui": "cd ui && vite",
+    "format": "prettier --write \"./**/*.ts\"",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukealford/fivem-ts-vue3-boilerplate.git"
+  },
+  "author": "lukealford",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukealford/fivem-ts-vue3-boilerplate/issues"
+  },
+  "homepage": "https://github.com/lukealford/fivem-ts-vue3-boilerplate#readme",
+  "dependencies": {
+    "@citizenfx/client": "^2.0.5711-1",
+    "@citizenfx/server": "^2.0.5711-1",
+    "@kyvg/vue3-notification": "^2.9.0",
+    "@nativewrappers/client": "^1.7.23",
+    "daisyui": "^2.18.0",
+    "pinia": "^2.0.14",
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.32",
+    "@typescript-eslint/eslint-plugin": "^5.23.0",
+    "@typescript-eslint/parser": "^5.23.0",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "autoprefixer": "^10.4.7",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "esbuild-loader": "^2.18.0",
+    "eslint": "^8.15.0",
+    "postcss": "^8.4.14",
+    "prettier": "^2.6.2",
+    "tailwindcss": "^3.1.4",
+    "ts-loader": "^9.3.0",
+    "typescript": "^4.6.4",
+    "vite": "^2.9.13",
+    "vue-tsc": "^0.38.2",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  }
+}
